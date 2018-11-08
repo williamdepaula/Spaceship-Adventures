@@ -26,4 +26,9 @@ Execute o jogo
     
     python game.py
 
+# Grupo Team12
+
+William de Paula - https://github.com/williamdepaula/
+
+
    
