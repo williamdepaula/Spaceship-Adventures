@@ -9,10 +9,12 @@ WINDOW_HEIGHT, WINDOW_WIDTH = 800, 600
 screen = pygame.display.set_mode((WINDOW_HEIGHT, WINDOW_WIDTH), FULLSCREEN)
 pygame.init()
 pygame.mouse.set_visible(False)
+sound = pygame.mixer.Sound('music/musica.wav')
 
 
 class Player:
     def __init__(self):
+        sound.play()
         self.movimento = {
             'up': False,
             'down': False,
