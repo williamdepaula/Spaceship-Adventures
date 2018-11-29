@@ -3,6 +3,7 @@
 import pygame, sys, glob
 from pygame import *
 from player import Player
+from scenario import Scenario
 
 
 class Game:
@@ -15,7 +16,7 @@ class Game:
         pygame.init()
         pygame.mouse.set_visible(False)
         self.sound = pygame.mixer.Sound('music/musica.wav')
-        self.sound.play()
+        self.sound.play(-1)
         self.font = pygame.font.Font("recursos/font.ttf", 25)
 
     def update(self):
@@ -27,6 +28,7 @@ class Game:
         self.screen.blit(mesg, (550, 10))
 
 game = Game()
+# scenario = Scenario(game)
 player = Player(game)
 
 
@@ -57,6 +59,7 @@ while True:
                 player.movimento['right'] = False
                 player.direcao = "up"
 
+    # scenario.update()
     player.update()
     game.update()
     pygame.display.update()
