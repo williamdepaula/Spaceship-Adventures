@@ -30,7 +30,7 @@ class Player:
         self.ani_max = len(self.ani[self.direcao])-1
         self.ani_speed_init = 50
         self.ani_speed = self.ani_speed_init
-        self.img = pygame.image.load(self.ani[self.direcao][self.ani_pos])
+        self.img = pygame.image.load(self.ani[self.direcao][self.ani_pos]).convert()
         self.x = (self.WINDOW[0]/2)-self.img.get_height()/2
         self.y = self.WINDOW[1]-self.img.get_width()
         self.update()
@@ -41,7 +41,7 @@ class Player:
     def update(self):
         self.ani_speed -= 1
         if self.ani_speed == 0:
-            self.img = pygame.image.load(self.ani[self.direcao][self.ani_pos])
+            self.img = pygame.image.load(self.ani[self.direcao][self.ani_pos]).convert()
             self.ani_speed = self.ani_speed_init
             if self.ani_pos == self.ani_max:
                 self.ani_pos = 0
