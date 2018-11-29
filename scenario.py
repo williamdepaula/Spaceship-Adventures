@@ -10,7 +10,7 @@ class Scenario:
 
     def __init__(self, game):
         self.screen = game.screen
-        self.img = pygame.image.load("recursos/background.jpg")
+        self.img = pygame.image.load("recursos/background.jpg").convert()
 
 
     def update(self):

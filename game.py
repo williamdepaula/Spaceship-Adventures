@@ -25,10 +25,10 @@ class Game:
         self.screen.blit(mesg, (10, 10))
         especial = "X X X : Especial"
         mesg = self.font.render(especial, 1, (255, 255, 255))
-        self.screen.blit(mesg, (550, 10))
+        self.screen.blit(mesg, (560, 10))
 
 game = Game()
-# scenario = Scenario(game)
+scenario = Scenario(game)
 player = Player(game)
 
 
@@ -59,7 +59,7 @@ while True:
                 player.movimento['right'] = False
                 player.direcao = "up"
 
-    # scenario.update()
+    scenario.update()
     player.update()
     game.update()
     pygame.display.update()
